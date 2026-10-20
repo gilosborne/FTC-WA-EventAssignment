@@ -61,8 +61,12 @@ For detailed Codespaces setup and troubleshooting, see [CODESPACES.md](CODESPACE
    ```bash
    bash setup.sh
    ```
-5. Above step will generate a folder called .data where we will store input/output files. Notes: by default computer will hide files and folders that start with a dot. For mac, Press (Command + Shift + .) then hidden .data folder will instantly appear. For windows, Open File Explorer -> Click View in the top menu bar -> Hover over Show, then click and check Hidden items then hidden .data folder will instantly appear
-6. For input files, we just used what were given
+5. Above step will generate a folder called .data where we will store input/output files.
+   - Open the current directory to find the .data folder: ```open .``` for mac, or ```explorer .``` for windows
+   - By default computer will hide files and folders that start with a dot.
+      - For mac, Press (Command + Shift + .)
+      - For windows, Open File Explorer -> Click View in the top menu bar -> Hover over Show, then click and check Hidden items.
+7. For input files, we just used what were given
 
 Kevin's original scripts (`assign_home_leagues.py`, `process_event_preferences.py`) read hardcoded paths under `./data/` and need the `uszipcode` package, which `requirements.txt` leaves out because it fails on Python 3.12. The `sorter/` package below replaces them.
 
