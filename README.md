@@ -18,6 +18,8 @@ Your team files and results stay on your computer. They're never uploaded to Git
 
 ## One-time setup
 
+These steps run the sorter on your own computer. To run it in your web browser instead, with nothing to install, skip ahead to [Option 2: GitHub Codespaces](#option-2-run-it-in-your-web-browser-with-github-codespaces).
+
 ### 1. Install Python
 
 Download the latest version from [python.org/downloads](https://www.python.org/downloads/) and run the installer.
