@@ -135,3 +135,37 @@ To stop the sorter at any point, press **q** (Mac) or **Ctrl + C**.
 ## Technical details
 
 Drive times, review limits, the review map and how teams are placed are covered in [Code/TECHNICAL.md](Code/TECHNICAL.md).
+
+---
+
+## Option 2: Run it in your web browser with GitHub Codespaces
+
+Use this if you can't install Python on your computer. GitHub Codespaces gives you a computer in the cloud that opens in your web browser, with everything already installed. You need a free GitHub account; sign up at [github.com/signup](https://github.com/signup) if you don't have one.
+
+### 1. Open the sorter in Codespaces (first time only)
+
+1. On this page, sign in to GitHub.
+2. Click the green **Code** button, open the **Codespaces** tab, and click **Create codespace on main**.
+3. Wait 1 to 2 minutes while it sets up. A window opens with a file list on the left and a terminal at the bottom. It's ready when the terminal says **Setup complete!**
+
+**Coming back later?** Go to [github.com/codespaces](https://github.com/codespaces) and click the codespace you made. Your files are still there.
+
+### 2. Upload your files
+
+In the file list on the left, right-click the **Input Files** folder, choose **Upload...**, and pick your teams, events and pre-assignments files. You can also drag them from your computer onto the folder. The files follow the same rules as [Step 1](#step-1-put-your-files-in-the-input-files-folder) above.
+
+### 3. Run the sorter
+
+Click inside the terminal at the bottom. It's already in the FTC-WA-EventAssignment folder, so type this and press **Enter**:
+```
+python3 Code/sort_teams.py
+```
+Answer the three questions the same way as [Step 4](#step-4-answer-the-three-questions) above, using the up and down arrow keys and **Enter**.
+
+### 4. Download your results
+
+When it says **Done!**, open the **Output Files** folder in the file list. Right-click each new file and choose **Download**, then open it in Excel and review it the same way as [Step 6](#step-6-review-the-flagged-teams).
+
+### When you're done
+
+Close the browser tab. The codespace stops on its own after 30 minutes and keeps your files for next time. A free GitHub account includes about 60 hours a month, which is plenty for sorting. More on cost and troubleshooting is in [CODESPACES.md](CODESPACES.md).
