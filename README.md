@@ -10,7 +10,7 @@ It works for FLL, FTC and FRC.
 |---|---|
 | **Input Files** | Put your teams, events and pre-assignments files here. |
 | **Code** | The sorter itself. You don't need to open or change anything in here. |
-| `team_assignments_...csv` and `event_summary_...csv` | Your results. A new pair appears each time you run the sorter. |
+| **Output Files** | Your results. A new pair of files appears here each time you run the sorter. |
 
 Your team files and results stay on your computer. They're never uploaded to GitHub.
 
@@ -89,7 +89,7 @@ The first time you run it, it spends about a minute downloading a public list of
 
 ### Step 5. Open your results
 
-When it says **Done!**, two new files are in the **FTC-WA-EventAssignment** folder, with the date and time in their names:
+When it says **Done!**, two new files are in the **Output Files** folder, with the date and time in their names:
 
 | File | What's in it |
 |---|---|

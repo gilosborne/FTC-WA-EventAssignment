@@ -67,9 +67,9 @@ output/
 # Local run outputs (may hold team data)
 formatted_combined_run/
 
-# Team data in Input Files and sorter results in the main folder (never commit)
+# Team data and sorter results (never commit)
 Input Files/*
 !Input Files/.gitkeep
-team_assignments_*.csv
-event_summary_*.csv
+Output Files/*
+!Output Files/.gitkeep
 .DS_Store

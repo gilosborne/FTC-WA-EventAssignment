@@ -5,8 +5,8 @@ Run from the FTC-WA-EventAssignment folder:
     python3 Code/sort_teams.py
 
 It asks for the teams file, the events file and, optionally, a pre-assignments file, then runs
-sorter.cli on them unchanged. Results land in the FTC-WA-EventAssignment folder with the date
-and time in their names, so earlier runs are never overwritten.
+sorter.cli on them unchanged. Results land in "Output Files" with the date and time in their
+names, so earlier runs are never overwritten.
 
 Keep this file runnable on old Pythons (no 3.10+ syntax) so it can explain a version problem
 instead of crashing on it.
@@ -20,6 +20,7 @@ from pathlib import Path
 CODE_DIR = Path(__file__).resolve().parent
 ROOT_DIR = CODE_DIR.parent
 INPUT_DIR = ROOT_DIR / "Input Files"
+OUTPUT_DIR = ROOT_DIR / "Output Files"
 ZIP_TABLE = CODE_DIR / ".data" / "zips.csv"
 
 try:
@@ -171,8 +172,9 @@ def main():
         return 2
 
     stamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    out = ROOT_DIR / f"team_assignments_{stamp}.csv"
-    summary = ROOT_DIR / f"event_summary_{stamp}.csv"
+    OUTPUT_DIR.mkdir(exist_ok=True)
+    out = OUTPUT_DIR / f"team_assignments_{stamp}.csv"
+    summary = OUTPUT_DIR / f"event_summary_{stamp}.csv"
 
     print("\nSorting with:")
     print(f"  Teams:           {teams.name}")
@@ -191,7 +193,7 @@ def main():
 
     print("-" * 60)
     if out.exists() and summary.exists():
-        print("Done! Your results are in the FTC-WA-EventAssignment folder:")
+        print("Done! Your results are in the Output Files folder:")
         print(f"  {out.name}")
         print(f"  {summary.name}")
         if result.returncode == 1:
